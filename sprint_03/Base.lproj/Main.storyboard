@@ -29,7 +29,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Сбросить"/>
                                 <connections>
-                                    <action selector="buttonResetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oa3-rS-3O5"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aSh-DZ-sdH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVf-4d-HYj">
@@ -38,7 +38,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="+"/>
                                 <connections>
-                                    <action selector="buttonPlusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EO5-i2-Fli"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hle-ZW-w4j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IF-mb-9La">
@@ -47,7 +47,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="-"/>
                                 <connections>
-                                    <action selector="buttonMinusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o27-id-vfK"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1k-Xj-u2c"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="История изменений" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTh-Ju-6Xz">

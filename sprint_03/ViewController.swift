@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         }
     }
     /*
-        Устанавливаем дефолтные:
+     Устанавливаем дефолтные:
      - текст лэйбла
      - цвета кнопок
      - значок на кнопке
@@ -38,56 +38,51 @@ class ViewController: UIViewController {
         buttonReset.setTitle("🔄", for: .normal)
     }
     
-    private func viewDateTime() -> String
-    {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH: mm"
-        dateFormatter.timeZone = TimeZone.current
-        let informationDateTime = dateFormatter.string (from: Date())
-        return informationDateTime
+    private lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        return formatter
+    }()
+    
+    private func viewDateTime() -> String {
+        return dateFormatter.string(from: Date())
     }
     
     /*
-        Обновление лэйбла количества нажатий
+     Обновление лэйбла количества нажатий
      */
     private func updateCountLabel() {
-       labelCounter.text = "Значение счетчика: \(numberOfClicks)"
+        labelCounter.text = "Значение счетчика: \(numberOfClicks)"
     }
     
     /*
-      Обновление текстового поля с историей изменений.
-        Принимаем кнопку, перебираем имя кнопки и в зависимости от названия выводим строку
+     Обновление текстового поля с историей изменений.
+     Принимаем кнопку, перебираем имя кнопки и в зависимости от названия выводим строку
      */
-    private func textViewUpdate(_ sender: UIButton) {
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        var changeText: String = ""
+        
         switch sender {
         case buttonPlus:
-            textViewChangeHistory.text += "\n [\(viewDateTime())]: значение изменено на +1"
+            numberOfClicks += 1
+            changeText = "значение изменено на +1"
+            
         case buttonMinus:
-            textViewChangeHistory.text += "\n [\(viewDateTime())]: значение изменено на -1"
+            if numberOfClicks > 0 {
+                numberOfClicks -= 1
+                changeText = "значение изменено на -1"
+            } else {
+                changeText = "попытка уменьшить значение счетчика ниже 0"
+            }
+            
         case buttonReset:
-            textViewChangeHistory.text += "\n [\(viewDateTime())]: значение сброшено"
+            numberOfClicks = 0
+            changeText = "значение сброшено"
         default:
             break
         }
-    }
-    
-    @IBAction func buttonPlusPressed(_ sender: Any) {
-        numberOfClicks += 1
-        textViewUpdate(buttonPlus)
-    }
-    
-    @IBAction func buttonMinusPressed(_ sender: Any) {
-        if numberOfClicks != 0 {
-            numberOfClicks -= 1
-            textViewUpdate(buttonMinus)
-        } else {
-            textViewChangeHistory.text += "\n [\(viewDateTime())]: попытка уменьшить значение счетчика ниже 0"
-        }
-    }
-    
-    @IBAction func buttonResetPressed(_ sender: Any) {
-        numberOfClicks = 0
-        textViewUpdate(buttonReset)
+        textViewChangeHistory.text += "\n [\(viewDateTime())]: \(changeText)"
     }
 }
-

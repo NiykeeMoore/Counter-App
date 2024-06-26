@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  sprint_03
-//
-//  Created by Владимир Головин on 23.04.2024.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B941B282C050B2200FD1E75 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B941B272C050B2200FD1E75 /* Date+Extensions.swift */; };
+		4BA033A82C2C828A00F314A0 /* CounterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA033A72C2C828A00F314A0 /* CounterImpl.swift */; };
+		4BA033AE2C2C8FE100F314A0 /* StatisticServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA033AD2C2C8FE100F314A0 /* StatisticServiceImpl.swift */; };
 		4BA2A33A2BD84D1B009DE95F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A3392BD84D1B009DE95F /* AppDelegate.swift */; };
 		4BA2A33C2BD84D1B009DE95F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A33B2BD84D1B009DE95F /* SceneDelegate.swift */; };
 		4BA2A33E2BD84D1B009DE95F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2A33D2BD84D1B009DE95F /* ViewController.swift */; };
@@ -16,7 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4BA2A3362BD84D1B009DE95F /* sprint_03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sprint_03.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2FF46D2C24CDDA008A228F /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B941B272C050B2200FD1E75 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		4BA033A72C2C828A00F314A0 /* CounterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterImpl.swift; sourceTree = "<group>"; };
+		4BA033AD2C2C8FE100F314A0 /* StatisticServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticServiceImpl.swift; sourceTree = "<group>"; };
 		4BA2A3392BD84D1B009DE95F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BA2A33B2BD84D1B009DE95F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4BA2A33D2BD84D1B009DE95F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,25 +43,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B941B262C050B0400FD1E75 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4B941B272C050B2200FD1E75 /* Date+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4BA2A32D2BD84D1B009DE95F = {
 			isa = PBXGroup;
 			children = (
-				4BA2A3382BD84D1B009DE95F /* sprint_03 */,
-				4BA2A3372BD84D1B009DE95F /* Products */,
+				4BA2A3382BD84D1B009DE95F /* Counter */,
+				4B2FF46D2C24CDDA008A228F /* Counter.app */,
 			);
 			sourceTree = "<group>";
 		};
-		4BA2A3372BD84D1B009DE95F /* Products */ = {
+		4BA2A3382BD84D1B009DE95F /* Counter */ = {
 			isa = PBXGroup;
 			children = (
-				4BA2A3362BD84D1B009DE95F /* sprint_03.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4BA2A3382BD84D1B009DE95F /* sprint_03 */ = {
-			isa = PBXGroup;
-			children = (
+				4B941B262C050B0400FD1E75 /* Helpers */,
 				4BA2A3392BD84D1B009DE95F /* AppDelegate.swift */,
 				4BA2A33B2BD84D1B009DE95F /* SceneDelegate.swift */,
 				4BA2A33D2BD84D1B009DE95F /* ViewController.swift */,
@@ -63,16 +70,18 @@
 				4BA2A3422BD84D1C009DE95F /* Assets.xcassets */,
 				4BA2A3442BD84D1C009DE95F /* LaunchScreen.storyboard */,
 				4BA2A3472BD84D1C009DE95F /* Info.plist */,
+				4BA033A72C2C828A00F314A0 /* CounterImpl.swift */,
+				4BA033AD2C2C8FE100F314A0 /* StatisticServiceImpl.swift */,
 			);
-			path = sprint_03;
+			path = Counter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4BA2A3352BD84D1B009DE95F /* sprint_03 */ = {
+		4BA2A3352BD84D1B009DE95F /* Counter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4BA2A34A2BD84D1C009DE95F /* Build configuration list for PBXNativeTarget "sprint_03" */;
+			buildConfigurationList = 4BA2A34A2BD84D1C009DE95F /* Build configuration list for PBXNativeTarget "Counter" */;
 			buildPhases = (
 				4BA2A3322BD84D1B009DE95F /* Sources */,
 				4BA2A3332BD84D1B009DE95F /* Frameworks */,
@@ -82,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = sprint_03;
+			name = Counter;
 			productName = sprint_03;
-			productReference = 4BA2A3362BD84D1B009DE95F /* sprint_03.app */;
+			productReference = 4B2FF46D2C24CDDA008A228F /* Counter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4BA2A3312BD84D1B009DE95F /* Build configuration list for PBXProject "sprint_03" */;
+			buildConfigurationList = 4BA2A3312BD84D1B009DE95F /* Build configuration list for PBXProject "Counter" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +120,11 @@
 				Base,
 			);
 			mainGroup = 4BA2A32D2BD84D1B009DE95F;
-			productRefGroup = 4BA2A3372BD84D1B009DE95F /* Products */;
+			productRefGroup = 4BA2A32D2BD84D1B009DE95F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4BA2A3352BD84D1B009DE95F /* sprint_03 */,
+				4BA2A3352BD84D1B009DE95F /* Counter */,
 			);
 		};
 /* End PBXProject section */
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BA2A33E2BD84D1B009DE95F /* ViewController.swift in Sources */,
+				4BA033AE2C2C8FE100F314A0 /* StatisticServiceImpl.swift in Sources */,
 				4BA2A33A2BD84D1B009DE95F /* AppDelegate.swift in Sources */,
 				4BA2A33C2BD84D1B009DE95F /* SceneDelegate.swift in Sources */,
+				4BA033A82C2C828A00F314A0 /* CounterImpl.swift in Sources */,
+				4B941B282C050B2200FD1E75 /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,18 +306,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4644EDH5S5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = sprint_03/Info.plist;
+				INFOPLIST_FILE = Counter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Counter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "VladimirGolovin.sprint-03";
+				PRODUCT_BUNDLE_IDENTIFIER = VladimirGolovin.Counter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -322,18 +336,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4644EDH5S5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = sprint_03/Info.plist;
+				INFOPLIST_FILE = Counter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Counter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "VladimirGolovin.sprint-03";
+				PRODUCT_BUNDLE_IDENTIFIER = VladimirGolovin.Counter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -344,7 +360,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4BA2A3312BD84D1B009DE95F /* Build configuration list for PBXProject "sprint_03" */ = {
+		4BA2A3312BD84D1B009DE95F /* Build configuration list for PBXProject "Counter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BA2A3482BD84D1C009DE95F /* Debug */,
@@ -353,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BA2A34A2BD84D1C009DE95F /* Build configuration list for PBXNativeTarget "sprint_03" */ = {
+		4BA2A34A2BD84D1C009DE95F /* Build configuration list for PBXNativeTarget "Counter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BA2A34B2BD84D1C009DE95F /* Debug */,

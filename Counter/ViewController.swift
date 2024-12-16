@@ -10,14 +10,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var deleteData: UIButton!
     
     //MARK: Params
-    private var counterImpl: CounterImpl!
+    private let counterImpl = CounterImpl()
     
     //MARK: View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.counterImpl = CounterImpl()
-        
         setupView()
         updateView()
     }
@@ -25,9 +22,15 @@ class ViewController: UIViewController {
     //MARK: Private Funcs
     private func setupView() {
         buttonPlus.tintColor = .red
+        buttonPlus.setTitle(ButtonName.increment.rawValue, for: .normal)
+        
         buttonMinus.tintColor = .blue
+        buttonMinus.setTitle(ButtonName.decrement.rawValue, for: .normal)
+        
         buttonReset.tintColor = .darkGray
-        buttonReset.setTitle("🔄", for: .normal)
+        buttonReset.setTitle(ButtonName.resetData.rawValue, for: .normal)
+        
+        textViewChangeHistory.backgroundColor = .systemGray6
     }
     
     private func updateView() {
